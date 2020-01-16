@@ -25,7 +25,7 @@ public class UI {
     Map map;
     private Adjacency adj;
     
-    public UI() {
+    public UI() {  //(  , )
         this.map = new Map(10);
         this.adj = new Adjacency();
         System.out.println("first");
