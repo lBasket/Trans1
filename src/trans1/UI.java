@@ -1,4 +1,7 @@
 package trans1;
+
+import java.util.ArrayList;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -26,28 +29,28 @@ public class UI {
     private Adjacency adj;
     
     public UI() {  //(  , )
+        
+ 
         this.map = new Map(10);
         this.adj = new Adjacency();
-        System.out.println("first");
-        this.plopNew(1, 2, "Gen");
-        adj.viewAdj();
-        adj.connect(1,1);
         
-        System.out.println("second");
-        this.plopNew(0, 3, "Load");
+        this.plopNew(1, 1, "Gen");
+        this.plopNew(2, 2, "Gen");
+        this.plopNew(3, 3, "Gen");
+        this.plopNew(4, 4, "Gen");
+        this.plopNew(5, 5, "Gen");
+        
+//        adj.connect(1,2);
+//        adj.connect(1,5);
+        adj.connect(2,3);
+//        adj.connect(2,5);
+        adj.connect(3,4);
+        adj.connect(4,5);
+//        adj.connect(1,2);
+
         adj.viewAdj();
         
-        
-        System.out.println("third");
-        this.plopNew(4, 6, "Sub");
-        adj.viewAdj();
-        
-        adj.connect(2, 2);
-        adj.connect(2, 3);
-        adj.viewAdj();
-System.out.println("third");
-        this.plopNew(4,3, "Sub");
-        adj.viewAdj();
+        System.out.println("FINAL: "+adj.connectedness());
         
     }
     
